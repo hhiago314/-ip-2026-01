@@ -4,17 +4,22 @@ import "fmt"
 
 func main() {
 	var salarioCarlos float64
+
 	fmt.Print("Digite o salário de Carlos: ")
 	fmt.Scan(&salarioCarlos)
 
 	salarioJoao := salarioCarlos / 3
+
+	investCarlos := salarioCarlos
+	investJoao := salarioJoao
+
 	meses := 0
 
-	for salarioJoao <= salarioCarlos {
-		salarioCarlos *= 1.02 // 2% ao mês
-		salarioJoao *= 1.05   // 5% ao mês
+	for investJoao < investCarlos {
+		investCarlos *= 1.02
+		investJoao *= 1.05
 		meses++
 	}
 
-	fmt.Printf("João ultrapassa Carlos em %d meses.\n", meses)
+	fmt.Println("Meses necessários:", meses)
 }
