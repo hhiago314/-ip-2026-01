@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atualizar Paciente</title>
+</head>
+<body>
+    <h1>Atualizar Paciente</h1>
+    <form action="/updatePatient" method="POST">
+        <label>ID do paciente:</label>
+        <input type="number" name="id" required>
+        <br><br>
+        <label>Nome:</label>
+        <input type="text" name="name" required>
+        <br><br>
+        <label>Idade:</label>
+        <input type="number" name="age" required>
+        <br><br>
+        <label>Tipo Sanguíneo:</label>
+        <input type="text" name="blood_type" required>
+        <br><br>
+        <button type="submit">Atualizar</button>
+    </form>
+</body>
+</html>

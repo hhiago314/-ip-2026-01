@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Pacientes</title>
+</head>
+<body>
+    <h1>Lista de Pacientes</h1>
+    <nav>
+        <a href="/forms/createPatient.html">Cadastrar paciente</a> |
+        <a href="/forms/updatePatient.html">Atualizar paciente</a> |
+        <a href="/forms/deletePatient.html">Apagar paciente</a>
+    </nav>
+    <br>
+    {{ if . }}
+    <table border="1" cellpadding="8" cellspacing="0">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Nome</th>
+                <th>Idade</th>
+                <th>Tipo Sanguíneo</th>
+                <th>Criado em</th>
+            </tr>
+        </thead>
+        <tbody>
+            {{ range . }}
+            <tr>
+                <td>{{ .ID }}</td>
+                <td>{{ .Name }}</td>
+                <td>{{ .Age }}</td>
+                <td>{{ .BloodType }}</td>
+                <td>{{ .CreatedAt }}</td>
+            </tr>
+            {{ end }}
+        </tbody>
+    </table>
+    {{ else }}
+    <p>Nenhum paciente cadastrado.</p>
+    {{ end }}
+</body>
+</html>

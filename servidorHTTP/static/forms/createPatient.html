@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Cadastrar Paciente</title>
+</head>
+
+<body>
+
+    <h1>Cadastrar Paciente</h1>
+
+    <form action="/createPatient" method="POST">
+        <label>Nome:</label>
+        <input type="text" name="name" required>
+        <br><br>
+        <label>Idade:</label>
+        <input type="number" name="age" required>
+        <br><br>
+        <label>Tipo Sanguíneo:</label>
+        <input type="text" name="blood_type" required>
+        <br><br>
+        <button type="submit">Cadastrar</button>
+    </form>
+
+</body>
+</html>
